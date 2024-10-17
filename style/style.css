@@ -38,9 +38,23 @@ header{
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    height: 800px;
+
+    & .slide{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    & h1{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 6rem;
+    }
 
     & img{
-        width: 250px;
+        width: 500px;
         margin: 0 50px;
     }
 }
