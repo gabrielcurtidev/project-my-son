@@ -8,50 +8,47 @@
 
      <!-- favicon -->
       <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+
+      <!-- box icons -->
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>DIVERTI CURTI</title>
 </head>
 <body>
-    
+        <audio src="audios/som-ambiente.mp3" autoplay loop id="somAmbiente"></audio>
+
         <header>
             <img src="logo/logo.png" alt="LOGO" class="logo">
-            <ul>
+            <!-- <ul>
                 <a href="#">ANIMAIS</a>
                 <a href="#">CORES</a>
-            </ul>
+            </ul> -->
+
+
         </header>
 
+          <div class="container-slider">
+              <button id="prev-button"><img src="imagens/arrow.png" alt="prev-button"></button>
+              <div class="container-images">
+                <img src="imagens/cao.png" alt="cao" class="slider on" id="dog-image">
+
+                <img src="imagens/gato.png" alt="gato" class="slider">
+
+                <img src="imagens/passaro.png" alt="passaro" class="slider">
+
+                <img src="imagens/porco.png" alt="porco" class="slider">
+
+                <img src="imagens/vaca.png" alt="vaca" class="slider">
+              </div>
+              <button id="next-button"><img src="imagens/arrow.png" alt="next-button"></button>
+          </div>
+
+          <audio id="dog-audio" src="audios/sound1.mp3"></audio>
         
-        <div class="container">
-            <input type="radio" name="btn-radio" id="radio1">
-            <input type="radio" name="btn-radio" id="radio2">
 
-            <div class="container-slide primeiro">
-                <h1>TESTE1</h1>
-            </div>
-
-            <div class="container-slide">
-                <h1>TESTE2</h1>
-            </div>
-
-            <div class="container-slide">
-                <h1>TESTE3</h1>
-            </div>
-
-            <div class="container-slide">
-                <h1>TESTE4</h1>
-            </div>
-
-            <div class="container-slide">
-                <h1>TESTEe5</h1>
-            </div>
-            
-        </div>
-        
-        <div class="nav-manual">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-        </div>
-            
+          <footer>
+            <h3>Curti Dev. Todos os direitos reservados.</h3>
+          </footer>
+          
     
         
     <script src="script.js"></script>

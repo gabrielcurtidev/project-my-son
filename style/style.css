@@ -11,8 +11,10 @@ body{
 
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 1rem 2rem;
+    padding: 10px;
+    border-bottom:;
     
     & a{
         color: #000;
@@ -34,53 +36,128 @@ header{
     }
 }
 
-.container{
+
+.container-slider {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: -8% 0 -2rem 0;
+}
+
+.container-images {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50%;
-    height: 800px;
-    border: 1px solid #000;
-    overflow: hidden;
-
-    & .container-slide{
-        border: 1px solid #000;
-        width: 300px;
-        height: 350px;
-    }
-}
-
-input[type='radio']{
-    display: none;
-}
-
-.nav-manual{
+    width: 500px;
+    margin: 0 30%;
+    
+  }
+  
+  .slider {
+    opacity: 0;
+    transition: opacity .2s;
     position: absolute;
     width: 100%;
-    margin-top: -23%;;
-    display: flex;
-    justify-content: space-around;
-    gap: 100rem;
-}
-
-.nav-manual .manual-btn{
-    background-color: #000;
-    width: 4rem;
-    height: 4rem;
-    padding: 10px;
-    border-radius: 50%;
+    border-radius: 10px;
     cursor: pointer;
-    transition: all .3s;
-}
+    
+  }
 
-.nav-manual .manual-btn:hover{
-    opacity: 0.8;
-}
+  .container-images img{
+    transition: all .5s;
+  }
 
-#radio1:checked ~ .primeiro{
-    margin-left: 0%;
-}
+  .container-images:hover img{
+    transform: scale(1.01);
+  }
+  
+  .on {
+    opacity: 1;
+  }
+  
+  #prev-button, #next-button {
+    width: 60px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  #prev-button img, #next-button img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #prev-button {
+    transform: rotate(180deg);
+  } 
+  
+  button{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+  }
 
-#radio2:checked ~ .primeiro{
-    margin-left: 100%;
-}
+  footer{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    margin-bottom: 1rem;
+  }
+  
+/* ==========================================================================
+responsive */
+
+  @media screen and (max-width: 870px){
+    .container-images img{
+        width: 500px;
+      }
+
+      #prev-button, #next-button {
+        width: 120px;
+        height: 40px;
+        margin: 0 10px;
+    
+      }
+
+      header{
+        margin-bottom: -14%;
+    }
+  }
+    
+  @media screen and (max-width: 430px){
+    .container-images img{
+        width: 320px;
+      }
+
+    #prev-button, #next-button {
+        width: 650px;
+        height: 40px;
+        margin: 0 15px;
+    
+      }
+  }
+
+  @media screen and (max-width: 380px){
+    .container-images img{
+        width: 250px;
+      }
+
+    #prev-button, #next-button {
+        width: 650px;
+        height: 40px;
+        margin: 0 15px;
+    
+      }
+
+    header{
+        margin-bottom: -20%;
+    }
+  }
+    
