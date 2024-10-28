@@ -39,3 +39,6 @@ btnPrev.addEventListener('click', prevSlider)
 
 document.getElementById("somAmbiente").volume = 0.02;
 
+document.getElementById('dog-image').addEventListener('click', function() {
+  document.getElementById('dog-audio').play();
+});
