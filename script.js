@@ -1,6 +1,13 @@
 const slider = document.querySelectorAll('.slider');
 const btnPrev = document.getElementById('prev-button');
 const btnNext = document.getElementById('next-button');
+const containerSlider = document.querySelector('.container-slider');
+
+var dogSound = document.querySelector('.dog-sound');
+dogSound.addEventListener('click', () => {
+  console.log('clicou');
+});
+
 
 let currentSlide = 0;
 
@@ -39,6 +46,3 @@ btnPrev.addEventListener('click', prevSlider)
 
 document.getElementById("somAmbiente").volume = 0.02;
 
-document.getElementById('dog-image').addEventListener('click', function() {
-  document.getElementById('dog-audio').play();
-});

@@ -2,10 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 
 body{
-    background-image: linear-gradient(90deg, #9785ff, #fff);
+    background-image: linear-gradient(90deg, #fff, #9785ff);
+    
 }
 
 
@@ -28,12 +30,42 @@ header{
     
     & a:hover{
         opacity: 0.8;
+        
     }
     
     & img{
-        width: 80px;
+        width: 60px;
         cursor: pointer;
+        position: relative;
+        animation: logoAnm 6s ease-in-out infinite;
     }
+
+    
+
+}
+
+@keyframes logoAnm {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 1;
+}
+25% {
+    transform: translateY(-5px) scale(1.02) rotate(-1deg);
+    opacity: 0.9;
+}
+50% {
+    transform: translateY(-7px) scale(1.1) rotate(1deg);
+    opacity: 0.85;
+}
+75% {
+    transform: translateY(-5px) scale(1.02) rotate(-1deg);
+    opacity: 0.9;
+}
+100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 1;
+}
+  
 }
 
 
@@ -64,20 +96,37 @@ header{
     width: 100%;
     border-radius: 10px;
     cursor: pointer;
+    animation: scaleAnm 2s ease-in-out infinite;
     
   }
+  
+  @keyframes scaleAnm {
+    0%{
+      transform: scale(1);
+    }
 
-  .container-images img{
-    transition: all .5s;
-  }
+    50%{
+      transform: scale(1.01, 1.02);
+    }
 
-  .container-images:hover img{
-    transform: scale(1.01);
+    100%{
+      transform: scale(1);
+    }
   }
   
   .on {
     opacity: 1;
   }
+  
+  .container-images img{
+    transition: all .5s;
+  }
+
+
+  .container-images:hover img{
+    transform: scale(1);
+  }
+  
   
   #prev-button, #next-button {
     width: 60px;
@@ -104,11 +153,13 @@ header{
     background-color: transparent;
   }
 
+
+
   footer{
+    height: 40px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 10px;
-    margin-bottom: 1rem;
   }
   
 /* ==========================================================================
