@@ -1,0 +1,4 @@
+var dogSom = document.querySelector('.dog-sound');
+dogSom.addEventListener('click', function (){
+    console.log('clicou')
+})

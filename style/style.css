@@ -145,12 +145,11 @@ header{
     transform: rotate(180deg);
   } 
   
-  button{
-    border: none;
+  #dog-sound{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
+    z-index: 1;
   }
 
 

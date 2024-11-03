@@ -1,9 +1,14 @@
-document.getElementById("somAmbiente").volume = 0.02;
+document.getElementById('somAmbiente').volume = '0.02'
 
-/*==============================*/ 
 
-var dogSound = document.getElementById('dog-sound')
 
-dogSound.addEventListener('click', () => {
-    console.log('clicou')
+var dogSom = document.getElementById('dog-sound').addEventListener('click', () => {
+    var dogAudio = document.getElementById('dog-audio')
+    dogAudio.currentTime = 0
+    dogAudio.play()
+
+    setTimeout(() => {
+        dogAudio.pause();
+        dogAudio.currentTime = 0;
+    }, 1200);
 })
