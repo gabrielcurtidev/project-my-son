@@ -3,11 +3,6 @@ const btnPrev = document.getElementById('prev-button');
 const btnNext = document.getElementById('next-button');
 const containerSlider = document.querySelector('.container-slider');
 
-var dogSound = document.querySelector('.dog-sound');
-dogSound.addEventListener('click', () => {
-  console.log('clicou');
-});
-
 
 let currentSlide = 0;
 
@@ -44,5 +39,5 @@ btnPrev.addEventListener('click', prevSlider)
 
 /*=====================sounds=======================*/
 
-document.getElementById("somAmbiente").volume = 0.02;
+
 
