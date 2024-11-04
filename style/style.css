@@ -145,14 +145,21 @@ header{
     transform: rotate(180deg);
   } 
   
-  #dog-sound{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
+
+  .muted-sound{
+    position: absolute;
+    color: #000;
+    left: 2%;
+    top: 94%;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
 
+  .muted-sound:hover{
+    opacity: 0.8;
+  }
 
+  
 
   footer{
     height: 40px;
@@ -166,7 +173,7 @@ responsive */
 
   @media screen and (max-width: 870px){
     .container-images img{
-        width: 500px;
+        width: 450px;
       }
 
       #prev-button, #next-button {
@@ -183,7 +190,7 @@ responsive */
     
   @media screen and (max-width: 430px){
     .container-images img{
-        width: 320px;
+        width: 300px;
       }
 
     #prev-button, #next-button {
@@ -196,12 +203,12 @@ responsive */
 
   @media screen and (max-width: 380px){
     .container-images img{
-        width: 250px;
+        width: 240px;
       }
 
     #prev-button, #next-button {
-        width: 650px;
-        height: 40px;
+        width: 550px;
+        height: 20px;
         margin: 0 15px;
     
       }

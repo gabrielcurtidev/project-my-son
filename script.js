@@ -2,6 +2,8 @@ const slider = document.querySelectorAll('.slider');
 const btnPrev = document.getElementById('prev-button');
 const btnNext = document.getElementById('next-button');
 const containerSlider = document.querySelector('.container-slider');
+var mutedSound = document.querySelector('.muted-sound');
+var soundAmbience = document.getElementById('somAmbiente').volume = 0.05;
 
 
 let currentSlide = 0;
@@ -38,6 +40,18 @@ btnNext.addEventListener('click', nextSlider)
 btnPrev.addEventListener('click', prevSlider)
 
 /*=====================sounds=======================*/
+
+mutedSound.addEventListener('click', () => {
+  // console.log('test som')
+  var soundAmbience = document.getElementById('somAmbiente')
+
+  if (soundAmbience.volume > 0) {
+    soundAmbience.volume = 0;
+  } else {
+    soundAmbience.volume = 0.05;
+  }
+});
+
 
 
 
